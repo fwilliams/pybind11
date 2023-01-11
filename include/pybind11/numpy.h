@@ -36,12 +36,6 @@
 typedef SSIZE_T ssize_t;
 #endif
 
-#if defined(_MSC_VER)
-#    pragma warning(push)
-#    pragma warning(disable : 4127) // warning C4127: Conditional expression is constant
-typedef SSIZE_T ssize_t;
-#endif
-
 #if defined(PYBIND11_NUMPY_1_ONLY) && !defined(PYBIND11_INTERNAL_NUMPY_1_ONLY_DETECTED)
 #    error PYBIND11_NUMPY_1_ONLY must be defined before any pybind11 header is included.
 #endif
