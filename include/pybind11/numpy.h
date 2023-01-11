@@ -21,6 +21,7 @@
 #include <cstdlib>
 #include <cstring>
 #include <functional>
+#include <iostream>
 #include <numeric>
 #include <sstream>
 #include <string>
@@ -28,15 +29,12 @@
 #include <typeindex>
 #include <utility>
 #include <vector>
-#include <iostream>
-
 
 #if defined(_MSC_VER)
-#  pragma warning(push)
-#  pragma warning(disable: 4127) // warning C4127: Conditional expression is constant
+#    pragma warning(push)
+#    pragma warning(disable : 4127) // warning C4127: Conditional expression is constant
 typedef SSIZE_T ssize_t;
 #endif
-
 
 #if defined(_MSC_VER)
 #    pragma warning(push)
@@ -999,7 +997,10 @@ public:
     int flags() const { return detail::array_proxy(m_ptr)->flags; }
 
     /// Mutable NumPy array flags
+<<<<<<< HEAD
 
+=======
+>>>>>>> 49668e5e (style: pre-commit fixes)
     int &flags() { return detail::array_proxy(m_ptr)->flags; }
 
     /// If set, the array is writeable (otherwise the buffer is read-only)
